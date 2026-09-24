@@ -1,0 +1,6 @@
+# robots.txt for Free Media Tool
+
+User-agent: *
+Allow: /
+
+Sitemap: https://free-mediatool.ai.studio/sitemap.xml

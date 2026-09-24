@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Tool Not Found | FreeToolsHub</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // GitHub Pages SPA router support
+      // Redirects deep links back to root index.html with appropriate hash/path
+      (function() {
+        var path = window.location.pathname;
+        var search = window.location.search || '';
+        var hash = window.location.hash || '';
+        // If loaded on GitHub pages project path e.g. /my-repo/tool/word-counter
+        var segments = path.split('/').filter(Boolean);
+        if (segments.length > 0) {
+          // If the last segment is not index.html and not 404.html
+          var last = segments[segments.length - 1];
+          if (last !== '404.html' && last !== 'index.html') {
+            // Find base project url
+            // If project is /repo-name/... then repo-name is segments[0]
+            var repoBase = window.location.hostname.endsWith('github.io') && segments.length > 1 ? '/' + segments[0] : '';
+            var targetHash = '#/' + segments.slice(repoBase ? 1 : 0).join('/');
+            window.location.replace(window.location.origin + repoBase + '/' + search + targetHash);
+          }
+        }
+      })();
+    </script>
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #f8fafc;
+        color: #0f172a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        padding: 20px;
+      }
+      .card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 40px 32px;
+        max-width: 520px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      }
+      .code {
+        font-size: 4rem;
+        font-weight: 800;
+        color: #2563eb;
+        line-height: 1;
+        margin-bottom: 12px;
+      }
+      h1 {
+        font-size: 1.5rem;
+        margin: 0 0 12px;
+      }
+      p {
+        color: #64748b;
+        margin: 0 0 24px;
+        line-height: 1.5;
+      }
+      .btn-group {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .btn-primary {
+        background: #2563eb;
+        color: #ffffff;
+      }
+      .btn-primary:hover {
+        background: #1d4ed8;
+      }
+      .btn-secondary {
+        background: #f1f5f9;
+        color: #334155;
+      }
+      .btn-secondary:hover {
+        background: #e2e8f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="code">404</div>
+      <h1>404 - Tool Not Found</h1>
+      <p>The page you're looking for doesn't exist or has been moved.</p>
+      <div class="btn-group">
+        <a href="./" class="btn btn-primary">Back Home</a>
+        <a href="./#all-tools" class="btn btn-secondary">Explore All Tools</a>
+      </div>
+    </div>
+  </body>
+</html>

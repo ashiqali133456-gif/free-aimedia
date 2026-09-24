@@ -1,0 +1,8 @@
+{
+  "name": "FreeToolsHub — 100+ Free Online Tools",
+  "description": "Fast, simple, and useful free online tools for images, PDFs, text, calculations, developers, and everyday tasks. 100% private in-browser processing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
